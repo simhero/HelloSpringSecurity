@@ -1,1 +1,45 @@
 
+spring:
+  profiles:
+    group:
+      local: core
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "prod_port"
+
+server:
+  port: 7777
+
+---
+
+
+spring:
+  config:
+    activate:
+      on-profile: "dev_port"
+
+server:
+  port: 8888
+
+---
+
+
+spring:
+  config:
+    activate:
+      on-profile: "local_port"
+
+server:
+  port: 8080
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "common"
